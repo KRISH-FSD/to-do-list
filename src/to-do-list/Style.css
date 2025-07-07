@@ -1,0 +1,145 @@
+/* Reset & Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  background-color: #121212;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+  padding: 40px 20px;
+  color: #ffffff;
+}
+
+/* Card Container */
+.container {
+  background-color: #1e1e1e;
+  padding: 40px 30px;
+width: 550px;
+  
+  border-radius: 20px;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+  transition: all 0.3s ease;
+}
+
+.container:hover {
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.4);
+}
+
+/* Heading */
+.container h1 {
+  text-align: center;
+  margin-bottom: 30px;
+  font-size: 28px;
+  color: #ffffff;
+  letter-spacing: 1px;
+}
+
+/* Form Styling */
+.form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 25px;
+}
+
+input {
+  flex: 1;
+  padding: 11px 13px;
+  font-size: 16px;
+  background: #2a2a2a;
+  border: 1px solid #333333;
+  border-radius: 10px;
+  color: #ffffff;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #00c6ae;
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 198, 174, 0.4);
+}
+
+/* Button */
+button {
+  background-color: #00c6ae;
+  color: #1e1e1e;
+  border: none;
+  border-radius: 10px;
+  padding: 12px 20px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+button:hover {
+  background-color: #02a592;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 198, 174, 0.4);
+}
+
+/* List Styling */
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #2a2a2a;
+  border: 1px solid #333333;
+  padding: 14px 18px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  animation: fadeSlideIn 0.4s ease;
+}
+
+li:hover {
+  background-color: #323232;
+}
+
+/* Delete Button */
+li button {
+  background: none;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  color: #ff4d4f;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+li button:hover {
+  transform: scale(1.1);
+  color: #e03131;
+}
+
+/* Add transition on list appear */
+@keyframes fadeSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Responsive */
+@media (max-width: 600px) {
+  .form {
+    flex-direction: column;
+  }
+
+  button {
+    width: 100%;
+  }
+}
